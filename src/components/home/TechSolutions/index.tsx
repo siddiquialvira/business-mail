@@ -25,7 +25,7 @@ const TechnologySolutions = () => {
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-bold text-gray-800 mb-4">ZOHO Mail</h2>
             <p className="text-gray-600 mb-4">
-              If you're searching for a reliable, ad-free business email hosting solution, Zoho Mail stands out with enterprise-grade security, end-to-end encryption, spam filtering, and phishing detection.
+              If you&#39;re searching for a reliable, ad-free business email hosting solution, Zoho Mail stands out with enterprise-grade security, end-to-end encryption, spam filtering, and phishing detection.
             </p>
             <button className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
               Get Free Demo →
@@ -94,7 +94,7 @@ const TechnologySolutions = () => {
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-bold text-gray-800 mb-4">Custom Mail Solutions</h2>
             <p className="text-gray-600 mb-4">
-              Give your business a competitive edge with Custom Mail — personalized, domain-based email addresses that reflect your brand's identity and boost customer trust.
+              Give your business a competitive edge with Custom Mail — personalized, domain-based email addresses that reflect your brand&#39;s identity and boost customer trust.
             </p>
             <button className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
               Get Free Demo →

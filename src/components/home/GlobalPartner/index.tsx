@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const PartnersSection = () => {
   const partnerImages = [
@@ -12,7 +13,6 @@ const PartnersSection = () => {
     '/sap-business-technology-partner-skynetiks-technologies.png',
   ];
 
-  // Duplicate images for infinite loop illusion
   const images = [...partnerImages, ...partnerImages];
 
   const [offset, setOffset] = useState(0);
@@ -24,7 +24,7 @@ const PartnersSection = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [partnerImages.length]);
 
   return (
     <section className="py-16 px-8 text-center bg-gray-50 overflow-hidden">
@@ -43,9 +43,11 @@ const PartnersSection = () => {
               key={index}
               className="flex justify-center items-center p-4 h-24 w-[16.66%] min-w-[16.66%]"
             >
-              <img
+              <Image
                 src={image}
                 alt={`Partner ${index + 1}`}
+                width={150}
+                height={60}
                 className="max-w-full max-h-full object-contain hover:scale-110 transition-transform duration-300"
               />
             </div>

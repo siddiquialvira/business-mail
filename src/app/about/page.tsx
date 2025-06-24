@@ -8,9 +8,11 @@ export default function AboutPage() {
         <main className="text-gray-800 bg-white">
             {/* Full-width Image Section */}
             <section className="relative w-full">
-                <img
+                <Image
                     src="/Email-cloud-solution-services-businessmail-partner-google-workspace.png"
                     alt="Email Cloud Solution"
+                    width={1920}
+                    height={500}
                     className="w-full h-auto object-cover"
                 />
             </section>
@@ -39,14 +41,13 @@ export default function AboutPage() {
                         A great renewal ratio 87% is an evident achievement. In the span of two decade, we have served more than
                         5k satisfied customers
                     </span>{" "}
-                    from all the segments of business. Majority of these are SME's and medium enterprises. The industry verticals
+                    from all the segments of business. Majority of these are SME&rsquo;s and medium enterprises. The industry verticals
                     served are pharma, automobile, garments, healthcare, infrastructure, event management, discrete manufacturing.
                 </p>
             </section>
 
             {/* Counter Section */}
             <CounterSection />
-
         </main>
     );
 }

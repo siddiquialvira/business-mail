@@ -6,6 +6,7 @@ import FooterAbove from '@/components/layouts/FooterAbove'
 import FooterBelow from '@/components/layouts/FooterBelow'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yourwebsite.com'), // 👈 Add this line
   title: 'Business Mail Solutions | Secure & Scalable',
   description: 'Get smart email, hosting, and cloud services with expert support tailored to your business needs.',
   keywords: ['Business Email', 'Hosting', 'Cloud Services', 'Secure Mail', 'Tech Solutions'],
