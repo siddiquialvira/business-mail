@@ -18,6 +18,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* globals.css */
+html,
+body {
+  background-color: #ffffff; /* sets background to white */
+  color: #1f2937; /* optional: tailwind gray-800 for text */
+}
+
 /* ✅ Optional custom utility from your old project */
 .hover-underline {
   position: relative;

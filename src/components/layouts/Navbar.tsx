@@ -65,9 +65,72 @@ export default function Navigation() {
           <div className="flex justify-center space-x-8">
             <Link href="/" className={`${isActive('/')} font-medium transition-colors`}>HOME</Link>
             <Link href="/about" className={`${isActive('/about')} font-medium transition-colors`}>ABOUT</Link>
-            <Link href="/solutions" className={`${isActive('/solutions')} font-medium transition-colors`}>SOLUTIONS</Link>
-            <Link href="/services" className={`${isActive('/services')} font-medium transition-colors`}>SERVICES</Link>
-            <Link href="/contact-us" className={`${isActive('/contact-us')} font-medium transition-colors`}>CONTACT US</Link>
+
+            {/* SOLUTIONS DROPDOWN */}
+            <div className="relative group">
+              <div className="flex flex-col items-center">
+                <button className={`font-medium transition-colors ${isActive('/solutions')}`}>SOLUTIONS</button>
+                {/* Invisible padding to maintain hover area */}
+                <div className="absolute top-full h-2 w-full bg-transparent" />
+              </div>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50">
+                <div className="flex flex-col min-w-[200px] text-sm text-gray-700">
+                  {[
+                    'google-workspace',
+                    'zoho-mail',
+                    'rc-mail',
+                    'zimbra-mail',
+                    'microsoft-365',
+                    'rediffmail-pro',
+                    'hosted-exchange',
+                    'custom-mail',
+                  ].map((slug) => (
+                    <Link
+                      key={slug}
+                      href={`/solutions/${slug}`}
+                      className="px-4 py-2 hover:bg-gray-100"
+                    >
+                      {slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* SERVICES DROPDOWN */}
+            <div className="relative group">
+              <div className="flex flex-col items-center">
+                <button className={`font-medium transition-colors ${isActive('/services')}`}>SERVICES</button>
+                {/* Invisible padding to maintain hover area */}
+                <div className="absolute top-full h-2 w-full bg-transparent" />
+              </div>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50">
+                <div className="flex flex-col min-w-[200px] text-sm text-gray-700">
+                  <Link href="/services/tech-support" className="px-4 py-2 hover:bg-gray-100">Tech Support</Link>
+                  <Link href="/services/mail-migration" className="px-4 py-2 hover:bg-gray-100">Mail Migration</Link>
+                </div>
+              </div>
+            </div>
+
+            {/* CONTACT US DROPDOWN */}
+            <div className="relative group">
+              <div className="flex flex-col items-center">
+                <button className={`font-medium transition-colors ${isActive('/contact-us')}`}>CONTACT US</button>
+                {/* Invisible padding to maintain hover area */}
+                <div className="absolute top-full h-2 w-full bg-transparent" />
+              </div>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-0 rounded-lg z-50">
+                <div className="flex flex-col min-w-[220px] text-sm text-gray-700">
+                  <Link href="/contact-us/product-signup" className="px-4 py-2 hover:bg-gray-100">Product Sign Up</Link>
+                  <Link href="/contact-us/free-trial" className="px-4 py-2 hover:bg-gray-100">Free Trial</Link>
+                  <Link href="/contact-us/call-back" className="px-4 py-2 hover:bg-gray-100">Get a Call Back</Link>
+                  <Link href="/contact-us/support" className="px-4 py-2 hover:bg-gray-100">Ask for Support</Link>
+                  <Link href="/contact-us/google-legacy" className="px-4 py-2 hover:bg-gray-100">Google Legacy Account Information</Link>
+                  <Link href="/contact-us/faq" className="px-4 py-2 hover:bg-gray-100">FAQ</Link>
+                </div>
+              </div>
+            </div>
+
             <Link href="/become-partner" className={`${isActive('/become-partner')} font-medium transition-colors`}>BECOME PARTNER</Link>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function AboutPage() {
             {/* Full-width Image Section */}
             <section className="relative w-full">
                 <Image
-                    src="/Email-cloud-solution-services-businessmail-partner-google-workspace.png"
+                    src="/About-us.png"
                     alt="Email Cloud Solution"
                     width={1920}
                     height={500}
